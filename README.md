@@ -1,4 +1,5 @@
 # How many ways to create object(s) in C++?
+[![Build Status](https://travis-ci.com/b1f6c1c4/cpp-create-objects.svg?branch=master)](https://travis-ci.com/b1f6c1c4/cpp-create-objects)
 
 Only heard of `T a` and `new T()`? You are not a REAL™ C++ programmer.
 
