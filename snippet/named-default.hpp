@@ -1,6 +1,6 @@
 template <typename T>
 T create()
 {
-    T a{57257};
+    T a;
     return a;
 }

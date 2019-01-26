@@ -34,7 +34,7 @@ Checkout how many ways you can think of to create some objects.
 
 # Example
 
-`snippet/default.hpp`:
+`snippet/named-default.hpp`:
 ```c++
 template <typename T>
 T create()
@@ -44,7 +44,7 @@ T create()
 }
 ```
 
-`snippet/new-default.hpp`:
+`snippet/new-empty.hpp`:
 ```c++
 template <typename T>
 T create()
