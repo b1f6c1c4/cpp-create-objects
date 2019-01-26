@@ -1,5 +1,6 @@
 # How many ways to create object(s) in C++?
-[![Build Status](https://travis-ci.com/b1f6c1c4/cpp-create-objects.svg?branch=master)](https://travis-ci.com/b1f6c1c4/cpp-create-objects)
+[![Build Status](https://img.shields.io/travis/com/b1f6c1c4/cpp-create-objects/master.svg?style=flat-square)](https://travis-ci.com/b1f6c1c4/cpp-create-objects)
+[![License](https://img.shields.io/badge/license-CC0-ff69b4.svg?style=flat-square)](https://creativecommons.org/publicdomain/zero/1.0/)
 
 Only heard of `T a` and `new T()`? You are not a REAL™ C++ programmer.
 
@@ -75,3 +76,9 @@ void create(check_t check)
     check(sizeof(a), &a);
 }
 ```
+
+# License
+
+We don't want you to think about legal consequence every time before creating an object.
+This project is proudly licensed as
+*Creative Commons Zero v1.0 Universal*
