@@ -6,7 +6,7 @@ class stub
 public:
     stub() : value(MAGIC_NUMBER) { invoke(""); }
     stub(int v) : value(v * 62) { invoke("int"); }
-    stub(std::initializer_list<int> &l) : value(*l.begin() * 2) { invoke("std::initializer_list<int>"); }
+    stub(std::initializer_list<int> l) : value(*l.begin() * 2) { invoke("std::initializer_list<int>"); }
 
     int value;
     static size_t invoke_count;

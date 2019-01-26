@@ -1,5 +1,6 @@
 template <typename T>
 T create()
 {
-    return *new T;
+    auto a = T{57257};
+    return a;
 }

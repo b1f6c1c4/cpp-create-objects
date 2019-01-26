@@ -15,6 +15,7 @@ Checkout how many ways you can think of to create some objects.
         * return an instance of `T`.
     * You may use auxilliary typedef, function, etc.
     * You may NOT do anything irrelevent to the object creation.
+    * You MUST use `auto` whenever possible.
 * Checkout `main.cpp` and see what is considered valid.
     * Remember, `MAGIC_NUMBER` is 114514.
 * Two creation methods are considered identical if they:
