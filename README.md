@@ -6,16 +6,13 @@ Checkout how many ways you can think of to create some objects.
 
 # Rules
 
-* Write your snippet in `snippet/*.hpp`:
+* Write your snippet in `snippet/**/*.hpp`:
+    * We will `#include <stdlib.h>` for you at the beginning.
     * It should have one (1) function definition named `create`:
-        * with template `typename T`;
-        * of signature `T ()`;
-        * invoke the constructor of `T` exactly once (1);
-            * copy-constructor and move-constructor are NOT included
-        * return an instance of `T`.
     * You may use auxilliary typedef, function, etc.
     * You may NOT do anything irrelevent to the object creation.
     * You MUST use `auto` whenever possible.
+    * The creation method should be universal - not just for our `stub`.
 * Checkout `main.cpp` and see what is considered valid.
     * Remember, `MAGIC_NUMBER` is 114514.
 * Two creation methods are considered identical if they:
@@ -31,10 +28,25 @@ Checkout how many ways you can think of to create some objects.
     * are compilable by both g++ and clang++ on ubunut xenial;
     * don't triggering any warnings (`-Wextra`);
     * are not "evil" (`rm -rf /*`)
+* Additional rules for `single`:
+    * with template `typename T`;
+    * of signature `T ()`;
+    * invoke the constructor of `T` exactly once (1);
+        * copy-constructor and move-constructor are NOT included
+    * return an instance of `T`.
+* Additional rules for `array`:
+    * with template `typename T`;
+    * of signature `void (check_t<T>)`, where `check_t<T> = void (*)(size_t, T (*)[3]))`;
+    * invoke the constructor of `T` exactly three (3) times
+        * copy-constructor and move-constructor are NOT included
+    * treat the three values equally (i.e., construct them the same way)
+    * invoke the function pointer exactly once (1):
+        * the first parameter should be the `sizeof` of the array
+        * the second parameter should be the pointer to the created array
 
 # Example
 
-`snippet/named-default.hpp`:
+`snippet/single/named-default.hpp`:
 ```c++
 template <typename T>
 T create()
@@ -44,11 +56,21 @@ T create()
 }
 ```
 
-`snippet/new-empty.hpp`:
+`snippet/single/new-empty.hpp`:
 ```c++
 template <typename T>
 T create()
 {
     return *new T();
+}
+```
+
+`snippet/array/named-default.hpp`:
+```c++
+template <typename T>
+void create(check_t check)
+{
+    T a[3];
+    check(sizeof(a), &a);
 }
 ```

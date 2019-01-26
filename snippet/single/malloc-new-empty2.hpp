@@ -1,5 +1,3 @@
-#include <stdlib.h>
-
 template <typename T>
 T create()
 {
