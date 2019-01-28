@@ -1,4 +1,5 @@
 #include <memory>
+
 template <typename T>
 T create()
 {
