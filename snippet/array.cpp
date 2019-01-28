@@ -78,7 +78,7 @@ void check(size_t sz, stub (*ptr)[3])
 
 int main()
 {
-    std::cout << "Testing " << SNIPPET_NAME << std::endl;
+    std::cout << "Testing array " << SNIPPET_NAME << std::endl;
     std::cout << "This is " << COMPILER_NAME << std::endl;
 
     create<stub>(&check);

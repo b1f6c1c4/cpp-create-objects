@@ -22,7 +22,7 @@ size_t stub::invoke_count = 0;
 
 int main()
 {
-    std::cout << "Testing " << SNIPPET_NAME << std::endl;
+    std::cout << "Testing single " << SNIPPET_NAME << std::endl;
     std::cout << "This is " << COMPILER_NAME << std::endl;
 
     auto &&result = create<stub>();

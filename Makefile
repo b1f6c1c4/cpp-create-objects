@@ -9,11 +9,11 @@ test: $(patsubst snippet/%.hpp, result/%, $(SNIPPETS))
 
 build/single/%.o: header.hpp snippet/single/%.hpp snippet/single.cpp
 	mkdir -p $(dir $@)
-	cat $^ | $(CXX) $(CFLAGS) -o $@ -DSNIPPET_NAME=\"$<\" -
+	cat $^ | $(CXX) $(CFLAGS) -o $@ -DSNIPPET_NAME=\"$*\" -
 
 build/array/%.o: header.hpp snippet/array/%.hpp snippet/array.cpp
 	mkdir -p $(dir $@)
-	cat $^ | $(CXX) $(CFLAGS) -o $@ -DSNIPPET_NAME=\"$<\" -
+	cat $^ | $(CXX) $(CFLAGS) -o $@ -DSNIPPET_NAME=\"$*\" -
 
 result/%: build/%.o
 	mkdir -p $(dir $@)
