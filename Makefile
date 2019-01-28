@@ -1,5 +1,5 @@
 SNIPPETS=$(wildcard snippet/**/*.hpp)
-CFLAGS=-x c++ -std=c++17 -Wall -Werror -Wextra -O0 -DMAGIC_NUMBER=114514 -DCOMPILER_NAME=\"$(CXX)\"
+CFLAGS=-x c++ -std=c++2a -Wall -Werror -Wextra -O0 -DMAGIC_NUMBER=114514 -DCOMPILER_NAME=\"$(CXX)\"
 
 .PHONY: all test clean
 
